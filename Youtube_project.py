@@ -6,14 +6,14 @@ from googleapiclient.discovery import build
   
 #API key connection 
 def Api_connect(): 
-     Api_Id=" AIzaSyAF3eVqBIbzu63Dzpeef_AH6MJ9ulVjnZs" 
+     Api_Id=<enter your API key here>
      api_service_name = "youtube" 
      api_version = "v3" 
      youtube = build(api_service_name, api_version, developerKey=Api_Id) 
      return youtube 
   
 youtube=Api_connect() 
-channel_id  = "UCXnDDUQyJpRfC98_ZRIuhZA"
+channel_id  = <enter any channel id>
 
  #get channel information 
 def get_channel_info(channel_id): 
@@ -120,7 +120,7 @@ def get_comment_info(video_ids):
         return Comment_Information 
 
 #MongoDB Connection 
-client = pymongo.MongoClient('mongodb+srv://Faizal:Faizal786faiz@cluster0.xxj6oge.mongodb.net/?retryWrites=true&w=majority') 
+client = pymongo.MongoClient<from mongoDB enter your developer key from your own mongodb account>
 db = client["Youtube_data"] 
 
 # upload to MongoDB 
@@ -139,7 +139,7 @@ def channel_details(channel_id):
 mydb = psycopg2.connect(
             host="localhost", 
             user="postgres", 
-            password="Faizal@2003", 
+            password="000000", 
             database= "Youtube_data", 
             port = "5432") 
 cursor = mydb.cursor() 
@@ -152,7 +152,7 @@ def channels_table():
     mydb = psycopg2.connect(
             host="localhost", 
             user="postgres", 
-            password="Faizal@2003", 
+            password="000000", 
             database= "Youtube_data", 
             port = "5432") 
     cursor = mydb.cursor() 
