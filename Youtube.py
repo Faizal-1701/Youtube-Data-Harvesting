@@ -11,7 +11,6 @@ def Api_connect():
      api_version = "v3" 
      youtube = build(api_service_name, api_version, developerKey=Api_Id) 
      return youtube 
-  
 youtube=Api_connect() 
 channel_id  = <enter any channel id>
 
