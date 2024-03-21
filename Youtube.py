@@ -8,7 +8,7 @@ import base64
   
 #API key connection 
 def Api_connect(): 
-     Api_Id=" AIzaSyAF3eVqBIbzu63Dzpeef_AH6MJ9ulVjnZs" 
+     Api_Id= "give your api key "
      api_service_name = "youtube" 
      api_version = "v3" 
      youtube = build(api_service_name, api_version, developerKey=Api_Id) 
@@ -126,7 +126,7 @@ def comment_info(video_ids):
         return Comment_Information 
 
 #MongoDB Connection 
-client = pymongo.MongoClient('mongodb+srv://Faizal:Faizal786faiz@cluster0.xxj6oge.mongodb.net/?retryWrites=true&w=majority') 
+client = pymongo.MongoClient('mongodb+srv://{username}:{password}@cluster0.xxj6oge.mongodb.net/?retryWrites=true&w=majority') 
 db = client["Youtube_data"] 
 
 # upload to MongoDB 
@@ -144,9 +144,9 @@ def channel_details(channel_id):
 ## connecting sql database server
 mydb = psycopg2.connect(
             host="localhost", 
-            user="postgres", 
-            password="Faizal@2003", 
-            database= "Youtube_data", 
+            user="postgres", # I used postgres so i defined  
+            password="123445678", # enter your password here
+            database= "Youtube_data", # enter u r database name
             port = "5432") 
 cursor = mydb.cursor() 
 mydb.commit() 
@@ -347,7 +347,7 @@ def set_background_image(image_path):
         </style>""",unsafe_allow_html=True,)
 
 # Set the background image
-set_background_image("D:/New folder/Youtube_image1.jpg")
+set_background_image("D:/New folder/Youtube_image1.jpg") # enter u r local path image file
 with st.sidebar:    
     st.markdown(''':red[YOUTUBE DATA HARVESTING AND WAREHOUSING]''') 
     st.markdown("<b><u>Overview :</b></u>", unsafe_allow_html=True)
